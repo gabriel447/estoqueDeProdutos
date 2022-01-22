@@ -1,0 +1,278 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans";
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    font-family: Arial;
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+
+/*pagina de login*/
+
+.box-erro {
+    font-size: 50px;
+    text-align: center;
+    color: white;
+    background-color: red;
+}
+
+.fundo-login {
+    background: url("../img/fundo.jpg")
+}
+
+.box-login {
+    border-radius: 20px;
+    max-width: 500px;
+    width: 95%;
+    padding: 60px 2%;
+    background: white;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.box-login h2 {
+    text-align: center;
+    font-size: 19px;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 10px 0;
+    color: black;
+}
+
+.box-login input[type=text],
+.box-login input[type=password] {
+    width: 100%;
+    height: 40px;
+    border: 1px solid #ccc;
+    padding-left: 8px;
+    margin-top: 8px;
+    border-radius: 10px;
+}
+
+.box-login input[type=submit] {
+    width: 140px;
+    height: 40px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 14px;
+    background: Green;
+    color: white;
+    border: 0;
+    border-radius: 10px;
+}
+
+div.logar {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.clear {
+    clear: both;
+}
+
+.center {
+    padding: 0 2%;
+    margin: 0 auto;
+}
+
+
+/*pagina home/menu*/
+
+#sidebar {
+    padding-top: 20px;
+    position: absolute;
+    width: 300px;
+    height: 100%;
+    background: #000;
+    left: -300px;
+}
+
+#sidebar.active {
+    left: 0;
+}
+
+#sidebar ul li {
+    padding: 20px 24px;
+}
+
+#sidebar a {
+    text-decoration: none;
+    color: white;
+    font-family: sans-serif;
+    font-size: 25px;
+    list-style: none;
+}
+
+#sidebar .toggle-btn {
+    position: absolute;
+    top: 30px;
+    left: 330px;
+}
+
+.toggle-btn span {
+    width: 45px;
+    height: 4px;
+    background: #000;
+    display: block;
+    margin-top: 4px;
+}
+
+
+/* perfil */
+
+.line-foto {
+    padding-top: 40px;
+}
+
+#foto {
+    padding: 10px;
+    border-radius: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 12%;
+}
+
+#edit {
+    text-align: center;
+    padding: 10px;
+}
+
+.line {
+    padding: 10px;
+}
+
+
+/* consulta */
+
+.consulta {
+    text-align: center;
+    padding-top: 80px;
+}
+
+.pesquisa {
+    padding: 5px;
+    width: 20%;
+    font-size: 16px;
+}
+
+.botao input {
+    padding: 5px;
+    background-color: green;
+    color: white;
+    margin: 10px;
+    border-radius: 5px;
+    width: 8%;
+    display: inline;
+    font-size: 17px;
+    color: white;
+    text-decoration: none;
+}
+
+
+/* cadastro */
+
+#cadastro {
+    padding-top: 50px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.titulos-cadastro {
+    padding: 10px;
+}
+
+.selects-cadastro {
+    width: 160px;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.botao input {
+    padding: 5px;
+    background-color: green;
+    color: white;
+    margin: 10px;
+    border-radius: 5px;
+    width: 8%;
+    display: inline;
+    font-size: 17px;
+    color: white;
+    text-decoration: none;
+}
+
+#digite {
+    padding: 5px;
+    border-radius: 5px;
+}
+
+
+/* consulta no banco */
+
+.erro-consulta {
+    text-align: center;
+}
+
+#dados-tabela {
+    box-sizing: border-box;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 350px;
+    padding-right: 350px;
+}
+
+#dados-tabela table {
+    border-collapse: collapse;
+}
+
+#dados-tabela td {
+    color: black;
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+
+/* editar */
+
+.edit {
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+}
+
+
+/* Upload */
+
+.titulo-upload {
+    text-align: center;
+    padding-top: 40px;
+}
+
+.upload {
+    display: flex;
+    justify-content: center;
+    padding-top: 80px;
+}
+
+#tentou {
+    text-align: center;
+    padding-top: 40px;
+}
