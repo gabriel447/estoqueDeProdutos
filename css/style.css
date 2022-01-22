@@ -91,6 +91,13 @@ div.logar {
 
 /*pagina home/menu*/
 
+.home {
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    padding-top: 60px;
+}
+
 #sidebar {
     padding-top: 20px;
     position: absolute;

@@ -20,15 +20,6 @@
 <a><p>Seja bem vindo</p><?php echo $_SESSION['nome']; ?></a> 
 </div>
 
-<style>
-    .home{
-        font-size: 30px;
-        display: flex;
-        justify-content: center;
-        padding-top: 60px;
-    }
-</style>
-
-
+<link href="../css/style.css" rel="stylesheet">
 
 </html>
