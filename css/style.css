@@ -203,7 +203,7 @@ div.logar {
 }
 
 .selects-cadastro {
-    width: 160px;
+    width: 20%;
     border-radius: 5px;
     padding: 5px;
 }
@@ -303,7 +303,7 @@ div.logar {
 .tituloChecklisTecnico {
     text-align: center;
     font-family: Verdana;
-    font-size: 20px;
+    font-size: 15px;
     color: black;
     padding-bottom: 30px;
 }

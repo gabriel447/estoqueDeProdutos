@@ -49,7 +49,6 @@ if (isset($_GET['busca'])) {
                 <button onclick="mudarEstado()">Checklist</button>
             </div>
 
-            //aqui começa o checklist que aparecerá quando clicar no botao
             <div id="checklist" style="visibility: hidden;">';
 
             if ($categoria == 'Notebook') {
