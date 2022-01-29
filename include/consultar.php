@@ -4,10 +4,9 @@
 
 <form action="consultar.php" method="get">
     <div class="consulta">
-        <textarea required maxlength="20" rows="1" class="pesquisa" type="text" name="busca" placeholder="digite o Nº de serie" ></textarea>
+        <textarea required maxlength="20" rows="1" class="pesquisa" type="text" name="busca" placeholder="digite o Nº de serie"></textarea>
         <div class="botao">
             <input type="submit" value="Consultar">
-            <!-- onclick="mudarEstado()" -->
         </div>
     </div>
 </form>
@@ -19,16 +18,15 @@ include "../conexao.php";
 if (isset($_GET['busca'])) {
 
     $busca = $_GET['busca'];
-    
+
     $sql = "SELECT * FROM produtos WHERE serial = '$busca'";
 
     $res = mysqli_query($conexao, $sql);
 
     $qtdreg = mysqli_num_rows($res);
 
-        if ($qtdreg > 0) {
-             // style="visibility: hidden;"
-    echo "<div id='dados-tabela'>
+    if ($qtdreg > 0) {
+        echo "<div id='dados-tabela'>
     <table>
         <tr>
             <td>id</td>
@@ -38,20 +36,37 @@ if (isset($_GET['busca'])) {
             <td>serial</td>
             <td>ean</td>
         </tr>";
-            while ($row = mysqli_fetch_assoc($res)) {
-                include "item.php";
-            }
-        }else {
-            echo "<br><p class='erro-consulta'>Não foi possível consultar, tente novamente!</p>";
+        while ($row = mysqli_fetch_assoc($res)) {
+            include "item.php";
+            //guardando a categoria em uma variavel para comparar o checklist
+            $categoria = $row['categoria'];
         }
+    } else {
+        echo "<br><p class='erro-consulta'>Não foi possível consultar, tente novamente!</p>";
     }
+}
 
 ?>
 
 </table>
 </div>
 
+<!-- checklist -->
+<button onclick="mudarEstado()">checklist</button>
+<div id="checklist" style="visibility: hidden;">
 <?php 
+
+    if ($categoria == 'Notebook') {
+        include('notebook.php');
+    } elseif ($categoria == 'Celular') {
+        include('celular.php');
+    } else {
+        echo ('erro!');
+    } 
+    
+?>
+</div>
+<?php
 
 if (isset($_GET["deletado"])) {
     echo "<p style='text-align: center'>Produto deletado com sucesso</p>";
@@ -62,8 +77,8 @@ if (isset($_GET["ndeletado"])) {
 
 ?>
 
-<!-- <script>
-    mudarEstado = () => {document.getElementById("dados-tabela").style.visibility = 'visible';}
-</script> -->
+<script>
+    mudarEstado = () => {document.getElementById("checklist").style.visibility = 'visible';}
+</script>
 
 <link href="../css/style.css" rel="stylesheet">

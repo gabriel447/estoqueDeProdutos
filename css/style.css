@@ -283,3 +283,37 @@ div.logar {
     text-align: center;
     padding-top: 40px;
 }
+
+/*checklists*/
+
+.tituloChecklistLoja {
+    text-align: center;
+    font-family: Verdana;
+    font-size: 20px;
+    color: black;
+    padding-bottom: 30px;
+}
+
+.corpoChecklistLoja {
+    text-align: center;
+}
+
+.corpoChecklistLoja div {
+    padding: 0px;
+}
+
+.tituloChecklisTecnico {
+    text-align: center;
+    font-family: Verdana;
+    font-size: 20px;
+    color: black;
+    padding-bottom: 30px;
+}
+
+.corpoChecklistTecnico {
+    text-align: center;
+}
+
+.corpoChecklistTecnico div {
+    padding: 0px;
+}
