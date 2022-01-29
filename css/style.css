@@ -286,20 +286,18 @@ div.logar {
 
 /*checklists*/
 
-.tituloChecklistLoja {
-    text-align: center;
-    font-family: Verdana;
-    font-size: 20px;
-    color: black;
-    padding-bottom: 30px;
+.botao-checklist {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
 }
 
-.corpoChecklistLoja {
-    text-align: center;
-}
-
-.corpoChecklistLoja div {
-    padding: 0px;
+.botao-checklist button{
+    background-color: green;
+    color: white;
+    padding: 7px;
+    border-radius: 5px;
+    font-size: 17px;
 }
 
 .tituloChecklisTecnico {
@@ -315,5 +313,17 @@ div.logar {
 }
 
 .corpoChecklistTecnico div {
-    padding: 0px;
+    padding: 10px;
+}
+
+.notas-finais h3 {
+    color: red;
+}
+
+.enviar-checklist button{
+    background-color: green;
+    color: white;
+    padding: 7px;
+    border-radius: 5px;
+    font-size: 17px;
 }

@@ -40,33 +40,33 @@ if (isset($_GET['busca'])) {
             include "item.php";
             //guardando a categoria em uma variavel para comparar o checklist
             $categoria = $row['categoria'];
+            //aqui fica o final da tabela e o inicio do checklist
+            echo '</table>
+            </div>
+
+            <!-- checklist -->
+            <div class="botao-checklist">
+                <button onclick="mudarEstado()">Checklist</button>
+            </div>
+
+            //aqui começa o checklist que aparecerá quando clicar no botao
+            <div id="checklist" style="visibility: hidden;">';
+
+            if ($categoria == 'Notebook') {
+                include('notebook.php');
+            } elseif ($categoria == 'Celular') {
+                include('celular.php');
+            } else {
+                //echo ('erro!');
+            }
+            //aqui é o fim do checklist
+            echo '</div>';
         }
     } else {
         echo "<br><p class='erro-consulta'>Não foi possível consultar, tente novamente!</p>";
     }
 }
 
-?>
-
-</table>
-</div>
-
-<!-- checklist -->
-<button onclick="mudarEstado()">checklist</button>
-<div id="checklist" style="visibility: hidden;">
-<?php 
-
-    if ($categoria == 'Notebook') {
-        include('notebook.php');
-    } elseif ($categoria == 'Celular') {
-        include('celular.php');
-    } else {
-        echo ('erro!');
-    } 
-    
-?>
-</div>
-<?php
 
 if (isset($_GET["deletado"])) {
     echo "<p style='text-align: center'>Produto deletado com sucesso</p>";
@@ -78,7 +78,9 @@ if (isset($_GET["ndeletado"])) {
 ?>
 
 <script>
-    mudarEstado = () => {document.getElementById("checklist").style.visibility = 'visible';}
+    mudarEstado = () => {
+        document.getElementById("checklist").style.visibility = 'visible';
+    }
 </script>
 
 <link href="../css/style.css" rel="stylesheet">
