@@ -76,10 +76,5 @@ if (isset($_GET["ndeletado"])) {
 
 ?>
 
-<script>
-    mudarEstado = () => {
-        document.getElementById("checklist").style.visibility = 'visible';
-    }
-</script>
-
+<script src="../js/menu.js"></script>
 <link href="../css/style.css" rel="stylesheet">
