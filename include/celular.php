@@ -59,5 +59,4 @@ $incheck = "INSERT INTO checklist_celular (carga,google,rom,app,stress,chip,nota
 if(isset($_POST['save']));
     $res = mysqli_query($conexao, $incheck);
 
-
 ?>

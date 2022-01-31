@@ -16,6 +16,7 @@
             </td>
         </tr>
 <?php
+
 include '../conexao.php';
 
 if (isset($_GET['deletar'])) {
@@ -29,6 +30,7 @@ if (isset($_GET['deletar'])) {
         header('location:consultar.php?ndeletado');
     }
 }
+
 ?>
 
 <link href="../css/style.css" rel="stylesheet">

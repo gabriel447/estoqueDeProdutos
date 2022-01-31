@@ -69,7 +69,6 @@ if (isset($_GET['busca'])) {
     }
 }
 
-
 if (isset($_GET["deletado"])) {
     echo "<p style='text-align: center'>Produto deletado com sucesso</p>";
 }

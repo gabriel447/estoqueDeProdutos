@@ -79,5 +79,4 @@ $selcheck = "SELECT * FROM checklist_notebook WHERE serie = $serial";
 if(isset($_POST['save']));
     $res = mysqli_query($conexao, $incheck);
 
-
 ?>

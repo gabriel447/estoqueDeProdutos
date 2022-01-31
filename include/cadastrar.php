@@ -4,7 +4,6 @@
 
 <div id="cadastro">
     <form id='teste' action="insert.php" method="post">
-
         <div>
             <h3>Categoria</h3>
             <select class="campos-cadastro" name="categoria">
@@ -17,7 +16,6 @@
                 <?php include 'marcas.php' ?>
             </select>
         </div>
-
         <section>
             <div>
                 <h3>modelo</h3>
@@ -36,7 +34,6 @@
                 <input type="submit" value="cadastrar">
             </div>
         </section>
-
     </form>
 </div>
 
