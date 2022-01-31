@@ -52,7 +52,7 @@ if (isset($_GET['busca'])) {
             <div id="checklist" style="visibility: hidden;">';
 
             //variavel usada no checklist como referencia
-            $serial = $row['serial'];
+            $id = $row['id'];
 
             if ($categoria == 'Notebook') {
                 include('notebook.php');

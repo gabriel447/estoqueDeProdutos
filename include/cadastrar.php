@@ -3,7 +3,7 @@
 </nav>
 
 <div id="cadastro">
-    <form id='teste' action="insert.php" method="post">
+    <form action="insert.php" method="post">
         <div>
             <h3>Categoria</h3>
             <select class="campos-cadastro" name="categoria">
@@ -31,7 +31,7 @@
             </div>
             <br>
             <div class="botao">
-                <input type="submit" value="cadastrar">
+                <input name="check" type="submit" value="cadastrar">
             </div>
         </section>
     </form>

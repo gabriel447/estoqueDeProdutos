@@ -54,9 +54,14 @@ $stress = $_POST['stress'];
 $chip = $_POST['chip'];
 $notas = $_POST['notas'];
 
-$incheck = "INSERT INTO checklist_celular (carga,google,rom,app,stress,chip,notas,serie) VALUES ('$carga','$google','$rom','$app','$stress','$chip','$notas','$serial')";
+$selcheck = "SELECT * FROM checklist_celular WHERE serie = $serial";
+//com update esta funcionando apenas com id
+$upcheck = "UPDATE `checklist_celular` SET `carga`='$carga',`google`='$google',`rom`='$rom',`app`='$app',`stress`='$stress',`chip`='$chip',`notas`='$notas' WHERE $id";
 
-if(isset($_POST['save']));
-    $res = mysqli_query($conexao, $incheck);
+if(isset($_POST['save'])){
+    if($selcheck > 0){
+        $res = mysqli_query($conexao, $upcheck);
+    }
+}
 
 ?>

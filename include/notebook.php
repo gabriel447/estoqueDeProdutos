@@ -72,11 +72,13 @@ $chave = $_POST['chave'];
 $bateria = $_POST['bateria'];
 $notas = $_POST['notas'];
 
-$incheck = "INSERT INTO checklist_notebook (carga,monitor,ram,linux,bios,pasta,hd,chave,bateria,notas,serie) VALUES ('$carga','$monitor','$ram','$linux','$bios','$pasta','$hd','$chave','$bateria','$notas','$serial')";
-$upcheck = "UPDATE checklist_notebook SET carga = '$carga', monitor = '$monitor, ram = '$ram, linux = '$linux', bios = '$bios, pasta = '$pasta', hd ='$hd', chave = '$chave', bateria = '$bateria', notas = '$notas'";
 $selcheck = "SELECT * FROM checklist_notebook WHERE serie = $serial";
+$upcheck = "UPDATE `checklist_notebook` SET `carga`='$carga',`monitor`='$monitor',`ram`='$ram',`linux`='$linux',`bios`='$bios',`pasta`='$pasta',`hd`='$hd',`chave`='$chave',`bateria`='$bateria',`notas`='$notas' WHERE $id";
 
-if(isset($_POST['save']));
-    $res = mysqli_query($conexao, $incheck);
+if(isset($_POST['save'])){
+    if($selcheck > 0){
+        $res = mysqli_query($conexao, $upcheck);
+    }
+}
 
 ?>
