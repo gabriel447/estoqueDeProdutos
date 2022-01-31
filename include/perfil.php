@@ -52,17 +52,17 @@
 
 <div>
     <h3 class="line"></h3>
-    <textarea required type="text" minlength="4" maxlength="25" name="nome" placeholder="nome" rows="1" cols="35" id="digite"></textarea>
+    <input required type="text" minlength="4" maxlength="25" name="nome" placeholder="nome" rows="1" id="digite"></input>
 </div>
 
 <div>
     <h3 class="line"></h3>
-    <textarea required type="text" minlength="4" maxlength="25" name="login" placeholder="login" rows="1" cols="35" id="digite"></textarea>
+    <input required type="text" minlength="4" maxlength="16" name="login" placeholder="login" rows="1" id="digite"></input>
 </div>
 
 <div>
     <h3 class="line"></h3>
-    <textarea required type="text" minlength="4" maxlength="8" name="senha" placeholder="senha" rows="1" cols="35" id="digite"></textarea>
+    <input required type="password" minlength="4" maxlength="9" name="senha" placeholder="senha" rows="1" id="digite"></input>
 </div>
 
 <div class="botao">

@@ -198,11 +198,11 @@ div.logar {
     font-size: 20px;
 }
 
-.titulos-cadastro {
+#cadastro h3{
     padding: 10px;
 }
 
-.selects-cadastro {
+.campos-cadastro {
     width: 20%;
     border-radius: 5px;
     padding: 5px;
