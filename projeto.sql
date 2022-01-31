@@ -2,10 +2,10 @@
 -- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Tempo de geração: 22-Jan-2022 às 13:32
--- Versão do servidor: 10.4.22-MariaDB
--- versão do PHP: 7.4.27
+-- Host: localhost
+-- Generation Time: Jan 31, 2022 at 03:45 PM
+-- Server version: 10.4.20-MariaDB
+-- PHP Version: 8.0.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Banco de dados: `projeto`
+-- Database: `projeto`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `arquivo`
+-- Table structure for table `arquivo`
 --
 
 CREATE TABLE `arquivo` (
@@ -35,7 +35,7 @@ CREATE TABLE `arquivo` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Extraindo dados da tabela `arquivo`
+-- Dumping data for table `arquivo`
 --
 
 INSERT INTO `arquivo` (`codigo`, `nome`, `data`, `id`) VALUES
@@ -47,7 +47,46 @@ INSERT INTO `arquivo` (`codigo`, `nome`, `data`, `id`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `produtos`
+-- Table structure for table `checklist_celular`
+--
+
+CREATE TABLE `checklist_celular` (
+  `id` int(11) NOT NULL,
+  `carga` varchar(50) NOT NULL,
+  `google` varchar(50) NOT NULL,
+  `rom` varchar(50) NOT NULL,
+  `app` varchar(50) NOT NULL,
+  `stress` varchar(50) NOT NULL,
+  `chip` varchar(50) NOT NULL,
+  `notas` varchar(255) NOT NULL,
+  `serie` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `checklist_notebook`
+--
+
+CREATE TABLE `checklist_notebook` (
+  `id` int(11) NOT NULL,
+  `carga` varchar(50) NOT NULL,
+  `monitor` varchar(50) NOT NULL,
+  `ram` varchar(50) NOT NULL,
+  `linux` varchar(50) NOT NULL,
+  `bios` varchar(50) NOT NULL,
+  `pasta` varchar(50) NOT NULL,
+  `hd` varchar(50) NOT NULL,
+  `chave` varchar(50) NOT NULL,
+  `bateria` varchar(50) NOT NULL,
+  `notas` varchar(255) NOT NULL,
+  `serie` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `produtos`
 --
 
 CREATE TABLE `produtos` (
@@ -60,7 +99,7 @@ CREATE TABLE `produtos` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Extraindo dados da tabela `produtos`
+-- Dumping data for table `produtos`
 --
 
 INSERT INTO `produtos` (`id`, `categoria`, `marca`, `modelo`, `serial`, `ean`) VALUES
@@ -73,7 +112,7 @@ INSERT INTO `produtos` (`id`, `categoria`, `marca`, `modelo`, `serial`, `ean`) V
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `usuarios`
+-- Table structure for table `usuarios`
 --
 
 CREATE TABLE `usuarios` (
@@ -85,52 +124,76 @@ CREATE TABLE `usuarios` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Extraindo dados da tabela `usuarios`
+-- Dumping data for table `usuarios`
 --
 
 INSERT INTO `usuarios` (`id`, `nome`, `nivel`, `login`, `senha`) VALUES
 (1, 'Gabriel dos Anjos Senra', 1, 'gabriel.senra', '1234');
 
 --
--- Índices para tabelas despejadas
+-- Indexes for dumped tables
 --
 
 --
--- Índices para tabela `arquivo`
+-- Indexes for table `arquivo`
 --
 ALTER TABLE `arquivo`
   ADD PRIMARY KEY (`codigo`);
 
 --
--- Índices para tabela `produtos`
+-- Indexes for table `checklist_celular`
+--
+ALTER TABLE `checklist_celular`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `checklist_notebook`
+--
+ALTER TABLE `checklist_notebook`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `produtos`
 --
 ALTER TABLE `produtos`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices para tabela `usuarios`
+-- Indexes for table `usuarios`
 --
 ALTER TABLE `usuarios`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT de tabelas despejadas
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT de tabela `arquivo`
+-- AUTO_INCREMENT for table `arquivo`
 --
 ALTER TABLE `arquivo`
   MODIFY `codigo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT de tabela `produtos`
+-- AUTO_INCREMENT for table `checklist_celular`
+--
+ALTER TABLE `checklist_celular`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `checklist_notebook`
+--
+ALTER TABLE `checklist_notebook`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `produtos`
 --
 ALTER TABLE `produtos`
   MODIFY `id` int(1) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT de tabela `usuarios`
+-- AUTO_INCREMENT for table `usuarios`
 --
 ALTER TABLE `usuarios`
   MODIFY `id` int(1) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
