@@ -6,7 +6,7 @@
             <td><?php echo $row['serial']; ?></td>
             <td><?php echo $row['ean']; ?></td>
             <td style="border: 0;">
-            <form id="" method="get" action="item.php">
+            <form method="get" action="item.php">
                 <button type="submit" value="<?php echo $row[
                     'serial'
                 ]; ?>" name="deletar" style="border:0;">        

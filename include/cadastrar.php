@@ -8,12 +8,12 @@
         <div>
             <h3>Categoria</h3>
             <select class="campos-cadastro" name="categoria">
-                <option value=" " selected>selecione</option>
+                <option selected>selecione</option>
                 <?php include 'categorias.php' ?>
             </select>
             <h3>marca</h3>
             <select class="campos-cadastro" name="marca">
-                <option value=" " selected>selecione</option>
+                <option selected>selecione</option>
                 <?php include 'marcas.php' ?>
             </select>
         </div>

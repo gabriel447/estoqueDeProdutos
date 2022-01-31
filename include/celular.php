@@ -1,41 +1,63 @@
 <section class="corpoChecklistTecnico">
-    <form action="" method="post">
+    <form method="post">
         <div>
             <h3>testado com outro carregador?</h3>
-            <input type="checkbox" value="yes"> sim
-            <br>
+            <input name="carga" type="checkbox" value="yes"> sim
+            <br>                                                                                                                                                                                                                                            
         </div>
         <div>
             <h3>retirado conta google?</h3>
-            <input type="checkbox" value="yes"> sim
+            <input name="google" type="checkbox" value="yes"> sim
             <br>
         </div>
         <div>
             <h3>feito software?</h3>
-            <input type="checkbox" value="yes"> sim
+            <input name="rom" type="checkbox" value="yes"> sim
             <br>
         </div>
         <div>
             <h3>executado phone check?</h3>
-            <input type="checkbox" value="yes"> sim
+            <input name="app" type="checkbox" value="yes"> sim
             <br>
         </div>
         <div>
             <h3>feito teste de stress?</h3>
-            <input type="checkbox" value="yes"> sim
+            <input name="stress" type="checkbox" value="yes"> sim
             <br>
         </div>
         <div>
             <h3>feito teste com chip?</h3>
-            <input type="checkbox" value="yes"> sim
+            <input name="chip" type="checkbox" value="yes"> sim
             <br>
         </div>
         <div class="notas-finais">
             <h3>Notas finais do checklist</h3>
-            <textarea placeholder="escreva aqui.." rows="4" cols="50" id=""></textarea>
+            <textarea name="notas" placeholder="escreva aqui.." rows="4" cols="50"></textarea>
         </div>
         <div class="enviar-checklist">
-            <button type="button">Enviar</button>
+            <button name="save" type="submit">Salvar</button>
         </div>
     </form>
 </section>
+
+<link href="../css/style.css" rel="stylesheet">
+
+<?php 
+
+include('../conexao.php');
+
+$carga = $_POST['carga'];
+$google = $_POST['google'];
+$rom = $_POST['rom'];
+$app = $_POST['app'];
+$stress = $_POST['stress'];
+$chip = $_POST['chip'];
+$notas = $_POST['notas'];
+
+$incheck = "INSERT INTO checklist_celular (carga,google,rom,app,stress,chip,notas,serie) VALUES ('$carga','$google','$rom','$app','$stress','$chip','$notas','$serial')";
+
+if(isset($_POST['save']));
+    $res = mysqli_query($conexao, $incheck);
+
+
+?>
