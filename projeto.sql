@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jan 31, 2022 at 03:45 PM
+-- Generation Time: Jan 31, 2022 at 06:56 PM
 -- Server version: 10.4.20-MariaDB
 -- PHP Version: 8.0.9
 
@@ -62,6 +62,13 @@ CREATE TABLE `checklist_celular` (
   `serie` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `checklist_celular`
+--
+
+INSERT INTO `checklist_celular` (`id`, `carga`, `google`, `rom`, `app`, `stress`, `chip`, `notas`, `serie`) VALUES
+(1, 'yes', '', '', '', '', '', '', 'aaaaaaaaaaaaaaaaaaaa');
+
 -- --------------------------------------------------------
 
 --
@@ -83,6 +90,13 @@ CREATE TABLE `checklist_notebook` (
   `serie` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `checklist_notebook`
+--
+
+INSERT INTO `checklist_notebook` (`id`, `carga`, `monitor`, `ram`, `linux`, `bios`, `pasta`, `hd`, `chave`, `bateria`, `notas`, `serie`) VALUES
+(1, 'yes', '', '', '', '', '', '', '', '', 'eita', 'bbbbbbbbbbbbbbbbbbbb');
+
 -- --------------------------------------------------------
 
 --
@@ -103,11 +117,8 @@ CREATE TABLE `produtos` (
 --
 
 INSERT INTO `produtos` (`id`, `categoria`, `marca`, `modelo`, `serial`, `ean`) VALUES
-(1, 'Celular', 'Apple', 'iphone 5s', 'aaaaaaaaaaaaaaaaaaaa', 3213546546546),
-(2, 'Notebook', 'Asus', 'vivo', 'bbbbbbbbbbbbbbbbbbbb', 6546546546546),
-(3, 'Notebook', 'Acer', 'aspire3', 'cccccccccccccccccccc', 4436568567867),
-(4, 'Celular', 'Lg', 'k20', 'dddddddddddddddddddd', 9849819681981),
-(5, 'Notebook', 'Positivo', 'lixo', 'eeeeeeeeeeeeeeeeeeee', 4564564556465);
+(1, 'Celular', 'Apple', 'iphone 6', 'aaaaaaaaaaaaaaaaaaaa', 5345345345345),
+(2, 'Notebook', 'Acer', 'aspire e 5', 'bbbbbbbbbbbbbbbbbbbb', 6786786786786);
 
 -- --------------------------------------------------------
 
@@ -178,19 +189,19 @@ ALTER TABLE `arquivo`
 -- AUTO_INCREMENT for table `checklist_celular`
 --
 ALTER TABLE `checklist_celular`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `checklist_notebook`
 --
 ALTER TABLE `checklist_notebook`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `produtos`
 --
 ALTER TABLE `produtos`
-  MODIFY `id` int(1) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(1) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `usuarios`
