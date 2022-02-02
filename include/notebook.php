@@ -72,12 +72,12 @@ $chave = $_POST['chave'];
 $bateria = $_POST['bateria'];
 $notas = $_POST['notas'];
 
-$selcheck = "SELECT * FROM checklist_notebook WHERE serie = $serial";
-$upcheck = "UPDATE `checklist_notebook` SET `carga`='$carga',`monitor`='$monitor',`ram`='$ram',`linux`='$linux',`bios`='$bios',`pasta`='$pasta',`hd`='$hd',`chave`='$chave',`bateria`='$bateria',`notas`='$notas' WHERE $id";
+$selcheck = "SELECT * FROM `checklist_notebook` WHERE `serie` = '$serial'";
+$upcheck = "UPDATE `checklist_notebook` SET `carga`='$carga',`monitor`='$monitor',`ram`='$ram',`linux`='$linux',`bios`='$bios',`pasta`='$pasta',`hd`='$hd',`chave`='$chave',`bateria`='$bateria',`notas`='$notas' WHERE '$id'";
 
 if(isset($_POST['save'])){
     if($selcheck > 0){
-        $res = mysqli_query($conexao, $upcheck);
+        $conexao->query($upcheck);
     }
 }
 
