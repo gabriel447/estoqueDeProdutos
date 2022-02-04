@@ -37,7 +37,7 @@
         </div>
         <div>
             <h3>verificado serial do windows?</h3>
-            <input type="checkbox" name="chave" value="yes" <?php if($serial != '') { echo 'checked'; } ?>> sim
+            <input type="checkbox" name="chave" value="yes" <?php if($chave != '') { echo 'checked'; } ?>> sim
             <br>
         </div>
         <div>

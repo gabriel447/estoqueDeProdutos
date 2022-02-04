@@ -40,7 +40,7 @@ if (isset($_GET['busca'])) {
             include "item.php";
             $id = $row['id'];
             $categoria = $row['categoria'];
-            $serial = $busca;
+            
             echo '</table>
             </div>
             <!-- checklist -->
