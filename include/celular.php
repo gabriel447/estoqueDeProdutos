@@ -59,7 +59,10 @@ $upcheck = "UPDATE `checklist_celular` SET `carga`='$carga',`google`='$google',`
 
 if(isset($_POST['save'])){
     if($selcheck > 0){
-        $conexao->query($upcheck);
+        $cons = mysqli_query($conexao, $upcheck);
+        if($cons){
+            header('location: consultar.php?busca='.$busca);
+        }
     }
 }
 

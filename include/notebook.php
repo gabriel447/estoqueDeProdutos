@@ -77,7 +77,10 @@ $upcheck = "UPDATE `checklist_notebook` SET `carga`='$carga',`monitor`='$monitor
 
 if(isset($_POST['save'])){
     if($selcheck > 0){
-        $conexao->query($upcheck);
+        $cons = mysqli_query($conexao, $upcheck);
+        if($cons){
+            header('location: consultar.php?busca='.$busca);
+        }
     }
 }
 
