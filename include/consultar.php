@@ -38,31 +38,18 @@ if (isset($_GET['busca'])) {
         </tr>";
         while ($row = mysqli_fetch_assoc($res)) {
             include "item.php";
-            //guardando a categoria em uma variavel para comparar o checklist
+            $id = $row['id'];
             $categoria = $row['categoria'];
-            //aqui fica o final da tabela e o inicio do checklist
+            $serial = $busca;
             echo '</table>
             </div>
-
             <!-- checklist -->
             <div class="botao-checklist">
                 <button onclick="mudarEstado()">Checklist</button>
             </div>
-
-            <div id="checklist" style="visibility: hidden;">';
-
-            //variavel usada no checklist como referencia
-            $id = $row['id'];
-
-            if ($categoria == 'Notebook') {
-                include('notebook.php');
-            } elseif ($categoria == 'Celular') {
-                include('celular.php');
-            } else {
-                //echo ('erro!');
-            }
-            //aqui é o fim do checklist
-            echo '</div>';
+            <div id="checklist" style="visibility: hidden;">
+            ';
+            include('checklist.php');
         }
     } else {
         echo "<br><p class='erro-consulta'>Não foi possível consultar, tente novamente!</p>";

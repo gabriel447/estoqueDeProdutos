@@ -4,6 +4,8 @@
 
 <h1 class="titulo-upload">Alterar foto do perfil</h1>
 
+<p class="aviso-upload">a imagem precisa ser de tamanho (512 x 512)</p>
+
 <div class="upload">
     <?php if(isset($msg) && $msg != false) echo "<p> $msg </p>"; ?>
     <form action="upload.php" method="POST" enctype="multipart/form-data">

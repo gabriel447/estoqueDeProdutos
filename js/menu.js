@@ -5,3 +5,4 @@ function show() {
 mudarEstado = () => {
     document.getElementById("checklist").style.visibility = 'visible';
 }
+
