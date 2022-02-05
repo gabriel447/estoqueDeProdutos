@@ -3,7 +3,7 @@
 // se a categoria for notebook
 
 if ($categoria == 'Notebook') {
-    $query = "SELECT * FROM checklist_notebook WHERE serie = '$busca'";
+    $query = "SELECT * FROM checklist_notebook WHERE serie = '$serial'";
     $result = mysqli_query($conexao, $query);
     $qtres = mysqli_num_rows($result);
     if($qtres > 0){
@@ -28,7 +28,7 @@ if ($categoria == 'Notebook') {
 // se a categoria for celular
 
 if ($categoria == 'Celular') {
-    $query = "SELECT * FROM checklist_celular WHERE serie = '$busca'";
+    $query = "SELECT * FROM checklist_celular WHERE serie = '$serial'";
     $result = mysqli_query($conexao, $query);
     $qtres = mysqli_num_rows($result);
     if($qtres > 0){
