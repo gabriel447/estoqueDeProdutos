@@ -54,8 +54,8 @@
 //  $chip = $_POST['chip'];
 //  $notas = $_POST['notas'];
 
-//  $selcheck = "SELECT * FROM `checklist_celular` WHERE `serie` = '$serial'";
-//  $upcheck = "UPDATE `checklist_celular` SET `carga`='$carga',`google`='$google',`rom`='$rom',`app`='$app',`stress`='$stress',`chip`='$chip',`notas`='$notas' WHERE '$id'";
+//  $selcheck = "SELECT * FROM checklist_celular WHERE `serie` = '$serial'";
+//  $upcheck = "UPDATE checklist_celular SET `carga`='$carga',`google`='$google',`rom`='$rom',`app`='$app',`stress`='$stress',`chip`='$chip',`notas`='$notas' WHERE '$id'";
 
 // if(isset($_POST['save'])){
 //     if($selcheck > 0){
