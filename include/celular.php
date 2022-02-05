@@ -44,26 +44,26 @@
 
 <?php 
 
-include('../conexao.php');
+//  include('../conexao.php');
 
-$carga = $_POST['carga'];
-$google = $_POST['google'];
-$rom = $_POST['rom'];
-$app = $_POST['app'];
-$stress = $_POST['stress'];
-$chip = $_POST['chip'];
-$notas = $_POST['notas'];
+//  $carga = $_POST['carga'];
+//  $google = $_POST['google'];
+//  $rom = $_POST['rom'];
+//  $app = $_POST['app'];
+//  $stress = $_POST['stress'];
+//  $chip = $_POST['chip'];
+//  $notas = $_POST['notas'];
 
-$selcheck = "SELECT * FROM `checklist_celular` WHERE `serie` = '$serial'";
-$upcheck = "UPDATE `checklist_celular` SET `carga`='$carga',`google`='$google',`rom`='$rom',`app`='$app',`stress`='$stress',`chip`='$chip',`notas`='$notas' WHERE '$id'";
+//  $selcheck = "SELECT * FROM `checklist_celular` WHERE `serie` = '$serial'";
+//  $upcheck = "UPDATE `checklist_celular` SET `carga`='$carga',`google`='$google',`rom`='$rom',`app`='$app',`stress`='$stress',`chip`='$chip',`notas`='$notas' WHERE '$id'";
 
-if(isset($_POST['save'])){
-    if($selcheck > 0){
-        $cons = mysqli_query($conexao, $upcheck);
-        if($cons){
-            header('location: consultar.php?busca='.$busca);
-        }
-    }
-}
+// if(isset($_POST['save'])){
+//     if($selcheck > 0){
+//         $cons = mysqli_query($conexao, $upcheck);
+//         if($cons){
+//             header('location: consultar.php?busca='.$busca);
+//         }
+//     }
+// }
 
 ?>
