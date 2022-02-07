@@ -14,11 +14,11 @@
 
     $qtdreg = mysqli_num_rows($res);
 
-    if ($qtdreg > 0){
-        while ($row = mysqli_fetch_assoc($res)){
-        }
+    if ($qtdreg > 0)
+        while ($row = mysqli_fetch_assoc($res))
+        
         $imagem =  $row['nome'];
-    }
+    
 ?>
 
 <div id="edit">

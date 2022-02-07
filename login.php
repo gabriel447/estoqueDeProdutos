@@ -31,5 +31,7 @@ if ($qtdreg > 0) {
     header("Location: include/home.php");
     
 } else {
+
     header("Location: index.php?erro=1");
+    
 }
