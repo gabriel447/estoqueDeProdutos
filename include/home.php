@@ -14,7 +14,7 @@
     ?>
 </nav>
 
-<?php include '../autentica.php'; ?> 
+<?php session_start() ?> 
 
 <div class="home">
 <a><p>Seja bem vindo</p><?php echo $_SESSION['nome']; ?></a> 

@@ -8,7 +8,7 @@
 
     include "../conexao.php";
 
-    $consulta = "SELECT nome FROM arquivo WHERE id = '1'";
+    $consulta = "SELECT nome FROM arquivo WHERE id = '2'";
 
     $res = mysqli_query($conexao, $consulta);
 
@@ -27,7 +27,7 @@
 </div>
 
 <div class="line">
-<h3><?php switch ($_SESSION['id']) {
+<h3><?php switch ($_SESSION['cargo']) {
   case "1":
     echo "Administrador";
     break;

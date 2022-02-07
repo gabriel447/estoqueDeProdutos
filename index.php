@@ -15,10 +15,6 @@
         echo "<p>falha de autenticação</p>";
     }
 
-    if(isset($_GET['autentica'])) {
-        echo '<p>acesso negado!</p>';
-    }
-
     ?>
 </header>
 
