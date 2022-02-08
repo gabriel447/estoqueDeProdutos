@@ -46,5 +46,3 @@ if ($categoria == 'Celular') {
 } else {
     //echo ('erro!');
 }
-
-?>

@@ -41,7 +41,7 @@ if (isset($_GET['busca'])) {
         while ($row = mysqli_fetch_assoc($res)) {
             include "item.php";
             $id = $row['id'];
-            $categoria = $row['categoria'];   
+            $categoria = $row['categoria'];
             echo '</table>
             </div>
             <!-- checklist -->

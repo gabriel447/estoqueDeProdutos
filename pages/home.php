@@ -11,13 +11,15 @@
 <?php include('../protect.php'); ?>
 
 <nav>
-    <?php 
+    <?php
     include('menu.php');
     ?>
 </nav>
 
 <div class="home">
-<a><p>Seja bem vindo</p><?php echo $_SESSION['nome']; ?></a> 
+    <a>
+        <p>Seja bem vindo</p><?php echo $_SESSION['nome']; ?>
+    </a>
 </div>
 
 <link href="./css/style.css" rel="stylesheet">

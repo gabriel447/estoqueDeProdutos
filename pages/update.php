@@ -15,5 +15,3 @@ include "../conexao.php";
     } else {
         header("location:perfil.php?neditado");
     }
-    
-?>

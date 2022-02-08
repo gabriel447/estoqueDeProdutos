@@ -21,15 +21,15 @@
         <section>
             <div>
                 <h3>modelo</h3>
-                <textarea class="campos-cadastro" maxlength="13" minlength="3" name="modelo" placeholder="digite aqui.." rows="1"  id="digite"></textarea>
+                <textarea class="campos-cadastro" maxlength="13" minlength="3" name="modelo" placeholder="digite aqui.." rows="1" id="digite"></textarea>
             </div>
             <div>
                 <h3>serial</h3>
-                <textarea class="campos-cadastro" required maxlength="20" minlength="4" name="serial" placeholder="digite aqui.." rows="1"  id="digite"></textarea>
+                <textarea class="campos-cadastro" required maxlength="20" minlength="4" name="serial" placeholder="digite aqui.." rows="1" id="digite"></textarea>
             </div>
             <div>
                 <h3>ean</h3>
-                <textarea class="campos-cadastro" required type="text" minlength="13" maxlength="13" name="ean" placeholder="digite aqui.." rows="1"  id="digite"></textarea>
+                <textarea class="campos-cadastro" required type="text" minlength="13" maxlength="13" name="ean" placeholder="digite aqui.." rows="1" id="digite"></textarea>
             </div>
             <br>
             <div class="botao">

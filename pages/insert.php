@@ -32,5 +32,3 @@ if ($res) {
 } else {
     header("location:cadastrar.php?ncadastrado");
 }
-
-?>
