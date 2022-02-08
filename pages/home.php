@@ -8,18 +8,19 @@
     <title>Painel</title>
 </head>
 
+<?php include('../protect.php'); ?>
+
 <nav>
     <?php 
-    include 'menu.php';
+    include('menu.php');
     ?>
 </nav>
-
-<?php session_start() ?> 
 
 <div class="home">
 <a><p>Seja bem vindo</p><?php echo $_SESSION['nome']; ?></a> 
 </div>
 
-<link href="../css/style.css" rel="stylesheet">
+<link href="./css/style.css" rel="stylesheet">
+<script src="./js/menu.js"></script>
 
 </html>

@@ -1,3 +1,5 @@
+<?php include('../protect.php'); ?>
+
 <nav>
     <?php include 'menu.php' ?>
 </nav>

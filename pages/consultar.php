@@ -1,3 +1,5 @@
+<?php include('../protect.php'); ?>
+
 <header>
     <?php include 'menu.php'; ?>
 </header>
@@ -65,5 +67,5 @@ if (isset($_GET["ndeletado"])) {
 
 ?>
 
-<script src="../js/menu.js"></script>
+<script src="../js/checklist.js"></script>
 <link href="../css/style.css" rel="stylesheet">

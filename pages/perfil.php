@@ -1,8 +1,8 @@
+<?php include('../protect.php'); ?>
+
 <nav>
 <?php include 'menu.php'; ?>
 </nav>
-
-<?php session_start();?>
 
 <?php 
 
