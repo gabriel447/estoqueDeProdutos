@@ -16,6 +16,7 @@ if (isset($_POST['login']) || isset($_POST['senha'])) {
         $consulta = "SELECT * FROM usuarios WHERE login = '$login' AND senha = '$senha'" or die("erro");;
         //guardamos em uma variavel o resultado da conexão e da consulta
         $resultado = mysqli_query($conexao, $consulta);
+        
         //aqui ele armazena a quantidade de registros que foram compativeis com o banco
         $qtdreg = mysqli_num_rows($resultado);
 

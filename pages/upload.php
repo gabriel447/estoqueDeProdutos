@@ -13,7 +13,7 @@ if (isset($_FILES['arquivo'])) {
         die('Falha ao enviar arquivo');
     }
 
-    if ($arquivo['size'] > 2097152) {
+    if ($arquivo['size'] > 2000000) {
         die('Arquivo excede o limite de tamanho (2mb)');
     }
 
