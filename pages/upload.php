@@ -1,9 +1,3 @@
-<?php include('../protect.php'); ?>
-
-<header>
-    <?php include 'menu.php'; ?>
-</header>
-
 <?php
 
 include '../conexao.php';
@@ -45,18 +39,6 @@ $sql_query = $conexao->query("SELECT * FROM arquivos") or die($conexao->error);
 
 ?>
 
-<h1 class="titulo-upload">Alterar foto do perfil</h1>
-
-<p class="aviso-upload">a imagem precisa ser de tamanho (512 x 512)</p>
-
-<div class="div-upload">
-    <form method="POST" enctype="multipart/form-data" action="">
-        <p><label for="">Selecione o arquivo</label>
-            <input name="arquivo" type="file">
-            <button name="upload" type="submit">Enviar arquivo</button>
-    </form>
-</div>
-
 <?php while ($arquivo = $sql_query->fetch_assoc()) { ?>
     <div class="line-foto">
         <img id="foto" src="<?php echo $arquivo['path']; ?>" alt="">
@@ -64,5 +46,14 @@ $sql_query = $conexao->query("SELECT * FROM arquivos") or die($conexao->error);
 <?php
 }
 ?>
-
+<div id="up">
+<p>a imagem precisa ser de tamanho (512 x 512)</p>
+<div>
+    <form method="POST" enctype="multipart/form-data" action="">
+        <p><label for="">Selecione o arquivo</label>
+            <input name="arquivo" type="file">
+            <button name="upload" type="submit">Enviar arquivo</button>
+    </form>
+</div>
+</div>
 <link href="./css/style.css" rel="stylesheet">

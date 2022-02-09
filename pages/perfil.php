@@ -5,10 +5,7 @@
 </nav>
 
 <div id="edit">
-    <div class="line-foto">
-        <img id="foto" src="" alt="Minha Figura">
-    </div>
-
+<?php include('upload.php');?>
     <div class="line">
         <h3><?php switch ($_SESSION['cargo']) {
                 case "1":
@@ -24,10 +21,6 @@
 
     <div class="line">
         <a><?php echo $_SESSION['nome']; ?></a>
-    </div>
-
-    <div class="line">
-        <a href="upload.php">alterar foto</a>
     </div>
 
     <div class="line">
