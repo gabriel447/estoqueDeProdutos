@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 07-Fev-2022 às 14:43
+-- Tempo de geração: 09-Fev-2022 às 15:29
 -- Versão do servidor: 10.4.22-MariaDB
 -- versão do PHP: 7.4.27
 
@@ -24,22 +24,23 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `arquivo`
+-- Estrutura da tabela `arquivos`
 --
 
-CREATE TABLE `arquivo` (
-  `codigo` int(11) NOT NULL,
-  `nome` varchar(40) NOT NULL,
-  `data` date NOT NULL DEFAULT current_timestamp(),
-  `id` int(1) NOT NULL
+CREATE TABLE `arquivos` (
+  `id` int(11) NOT NULL,
+  `nome` varchar(100) NOT NULL,
+  `path` varchar(100) NOT NULL,
+  `data` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Extraindo dados da tabela `arquivo`
+-- Extraindo dados da tabela `arquivos`
 --
 
-INSERT INTO `arquivo` (`codigo`, `nome`, `data`, `id`) VALUES
-(1, 'f620d54c71e5639b31e2ab14ada189b8.jpg', '2022-02-07', 1);
+INSERT INTO `arquivos` (`id`, `nome`, `path`, `data`) VALUES
+(1, '6c287fc0e03f014ee66658fee2f0424b.jpg', '../upload/6203c30c1c83f.jpg', '2022-02-09 10:35:08'),
+(2, 'EQ01gmgXYAAHVOY.jpg', '../upload/6203c3c87b3cf.jpg', '2022-02-09 10:38:16');
 
 -- --------------------------------------------------------
 
@@ -126,7 +127,7 @@ INSERT INTO `produtos` (`id`, `categoria`, `marca`, `modelo`, `serial`, `ean`) V
 CREATE TABLE `usuarios` (
   `id` int(1) NOT NULL,
   `nome` varchar(25) NOT NULL,
-  `nivel` int(1) NOT NULL,
+  `cargo` int(1) NOT NULL,
   `login` varchar(25) NOT NULL,
   `senha` varchar(25) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -135,18 +136,19 @@ CREATE TABLE `usuarios` (
 -- Extraindo dados da tabela `usuarios`
 --
 
-INSERT INTO `usuarios` (`id`, `nome`, `nivel`, `login`, `senha`) VALUES
-(1, 'Gabriel dos Anjos Senra', 1, 'gabriel.senra', '1234');
+INSERT INTO `usuarios` (`id`, `nome`, `cargo`, `login`, `senha`) VALUES
+(1, 'Gabriel dos Anjos Senra', 1, 'gabriel.senra', '1234'),
+(2, 'pequeno gafanhoto', 3, 'gafanhoto', '1234');
 
 --
 -- Índices para tabelas despejadas
 --
 
 --
--- Índices para tabela `arquivo`
+-- Índices para tabela `arquivos`
 --
-ALTER TABLE `arquivo`
-  ADD PRIMARY KEY (`codigo`);
+ALTER TABLE `arquivos`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Índices para tabela `checklist_celular`
@@ -177,10 +179,10 @@ ALTER TABLE `usuarios`
 --
 
 --
--- AUTO_INCREMENT de tabela `arquivo`
+-- AUTO_INCREMENT de tabela `arquivos`
 --
-ALTER TABLE `arquivo`
-  MODIFY `codigo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+ALTER TABLE `arquivos`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de tabela `checklist_celular`
@@ -204,7 +206,7 @@ ALTER TABLE `produtos`
 -- AUTO_INCREMENT de tabela `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(1) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(1) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

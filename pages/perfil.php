@@ -4,24 +4,9 @@
     <?php include 'menu.php'; ?>
 </nav>
 
-<?php
-
-include "../conexao.php";
-
-$consulta = "SELECT nome FROM arquivo WHERE id = '1'";
-
-$res = mysqli_query($conexao, $consulta);
-
-$qtdreg = mysqli_num_rows($res);
-
-if ($qtdreg > 0)
-    while ($row = mysqli_fetch_assoc($res))
-        $imagem =  $row['nome'];
-?>
-
 <div id="edit">
     <div class="line-foto">
-        <img id="foto" src="../upload/<?php echo $imagem; ?>" alt="Minha Figura">
+        <img id="foto" src="" alt="Minha Figura">
     </div>
 
     <div class="line">
