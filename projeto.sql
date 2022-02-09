@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 09-Fev-2022 às 16:27
+-- Tempo de geração: 09-Fev-2022 às 19:53
 -- Versão do servidor: 10.4.22-MariaDB
 -- versão do PHP: 7.4.27
 
@@ -40,7 +40,8 @@ CREATE TABLE `arquivos` (
 
 INSERT INTO `arquivos` (`id`, `nome`, `path`, `data`) VALUES
 (1, '6c287fc0e03f014ee66658fee2f0424b.jpg', '../upload/6203dbc9ded39.jpg', '2022-02-09 12:20:41'),
-(2, 'EQ01gmgXYAAHVOY.jpg', '../upload/6203dced1f529.jpg', '2022-02-09 12:25:33');
+(2, 'EQ01gmgXYAAHVOY.jpg', '../upload/6203dced1f529.jpg', '2022-02-09 12:25:33'),
+(3, 'thumb-1920-67542.jpg', '../upload/62040c249ef06.jpg', '2022-02-09 15:47:00');
 
 -- --------------------------------------------------------
 
@@ -137,7 +138,7 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id`, `nome`, `cargo`, `login`, `senha`) VALUES
-(1, 'Gabriel dos Anjos Senra', 1, 'gabriel.senra', '1234'),
+(1, 'Gabriel dos Anjos', 1, 'gabriel.senra', '1234'),
 (2, 'pequeno gafanhoto', 3, 'gafanhoto', '1234');
 
 --
@@ -182,7 +183,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de tabela `arquivos`
 --
 ALTER TABLE `arquivos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de tabela `checklist_celular`
