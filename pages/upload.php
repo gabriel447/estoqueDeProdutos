@@ -2,6 +2,8 @@
 
 include '../conexao.php';
 
+$cod = $_SESSION['id'];
+
 if (isset($_FILES['arquivo'])) {
     $arquivo = $_FILES['arquivo'];
 
@@ -35,7 +37,7 @@ if (isset($_FILES['arquivo'])) {
         echo "<p>Falha ao enviar arquivo</p>";
 }
 
-$sql_query = $conexao->query("SELECT * FROM arquivos") or die($conexao->error);
+$sql_query = $conexao->query("SELECT * FROM arquivos WHERE id = $cod") or die($conexao->error);
 
 ?>
 
