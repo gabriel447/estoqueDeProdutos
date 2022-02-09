@@ -59,7 +59,7 @@ $sql_query = $conexao->query("SELECT * FROM arquivos") or die($conexao->error);
 
 <?php while ($arquivo = $sql_query->fetch_assoc()) { ?>
     <div class="line-foto">
-        <img id="foto" src="<?php echo $arquivo['path']; ?>" alt="Minha Figura">
+        <img id="foto" src="<?php echo $arquivo['path']; ?>" alt="">
     </div>
 <?php
 }
