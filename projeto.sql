@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 09-Fev-2022 às 16:14
+-- Tempo de geração: 09-Fev-2022 às 16:27
 -- Versão do servidor: 10.4.22-MariaDB
 -- versão do PHP: 7.4.27
 
@@ -39,7 +39,8 @@ CREATE TABLE `arquivos` (
 --
 
 INSERT INTO `arquivos` (`id`, `nome`, `path`, `data`) VALUES
-(1, '6c287fc0e03f014ee66658fee2f0424b.jpg', '../upload/6203d997e598b.jpg', '2022-02-09 12:11:19');
+(1, '6c287fc0e03f014ee66658fee2f0424b.jpg', '../upload/6203dbc9ded39.jpg', '2022-02-09 12:20:41'),
+(2, 'EQ01gmgXYAAHVOY.jpg', '../upload/6203dced1f529.jpg', '2022-02-09 12:25:33');
 
 -- --------------------------------------------------------
 
@@ -181,7 +182,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de tabela `arquivos`
 --
 ALTER TABLE `arquivos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de tabela `checklist_celular`
