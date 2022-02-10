@@ -8,16 +8,6 @@ if ($categoria == 'Notebook') {
     $qtres = mysqli_num_rows($result);
     if($qtres > 0){
         while($campo = mysqli_fetch_assoc($result)){
-            $carga = $campo['carga'];
-            $monitor = $campo['monitor'];
-            $ram = $campo['ram'];
-            $linux = $campo['linux'];
-            $bios = $campo['bios'];
-            $pasta = $campo['pasta'];
-            $hd = $campo['hd'];
-            $chave = $campo['chave'];
-            $bateria = $campo['bateria'];
-            $notas = $campo['notas'];
             include('notebook.php');
         }
     }
@@ -33,13 +23,6 @@ if ($categoria == 'Celular') {
     $qtres = mysqli_num_rows($result);
     if($qtres > 0){
         while($campo = mysqli_fetch_assoc($result)){
-            $carga = $campo['carga'];
-            $google = $campo['google'];
-            $rom = $campo['rom'];
-            $app = $campo['app'];
-            $stress = $campo['stress'];
-            $chip = $campo['chip'];
-            $notas = $campo['notas'];
             include('celular.php');
         }
     }
