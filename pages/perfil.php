@@ -5,7 +5,6 @@
 </nav>
 
 <div id="edit">
-<?php //include('upload.php');?>
     <div class="line">
         <h3><?php switch ($_SESSION['cargo']) {
                 case "1":

@@ -33,6 +33,7 @@
             </div>
             <br>
             <div class="botao">
+                <!-- o name esta sendo usado para a inserção do checklist o resto esta proposto em action -->
                 <input name="check" type="submit" value="cadastrar">
             </div>
         </section>

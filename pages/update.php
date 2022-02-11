@@ -1,6 +1,8 @@
 <?php
 
-include "../conexao.php";
+include('../protect.php');
+
+include ('../conexao.php');
 
 session_start();
 
@@ -8,7 +10,7 @@ session_start();
     $login = $_POST['login'];
     $senha = $_POST['senha'];
 
-    $up = "UPDATE usuarios SET nome = '$nome', login = '$login', senha = '$senha' WHERE '1'";
+    $up = "UPDATE usuarios SET nome = '$nome', login = '$login', senha = '$senha' WHERE id= $id";
 
     $cons = mysqli_query($conexao, $up);
 

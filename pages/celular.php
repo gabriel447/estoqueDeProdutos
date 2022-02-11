@@ -47,7 +47,7 @@
             <textarea name="notas" placeholder="<?php echo $campo['notas']; ?>" rows="4" cols="50"></textarea>
         </div>
         <div class="enviar-checklist">
-            <button name="save" type="submit">Salvar</button>
+            <button name="save" type="submit">Alterar</button>
         </div>
     </form>
 </section>
@@ -73,6 +73,6 @@ $qry = "UPDATE checklist_celular SET carga = '$carga', google = '$google', rom =
 $conexao->query($qry);
 
 header('location: consultar.php?busca='.$busca);
-
+exit;
 }
 ?>
