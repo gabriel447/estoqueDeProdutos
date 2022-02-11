@@ -2,42 +2,42 @@
     <form method="post">
         <div>
             <h3>testado com outro carregador?</h3>
-            <input name="check[]" type="checkbox" value="yes" <?php if ($campo['carga'] != '') {
+            <input name="carga" type="checkbox" value="yes" <?php if ($campo['carga'] == 'yes') {
                                                                 echo 'checked';
                                                             } ?>> sim
             <br>
         </div>
         <div>
             <h3>retirado conta google?</h3>
-            <input name="check[]" type="checkbox" value="yes" <?php if ($campo['google'] != '') {
+            <input name="check[]" type="checkbox" value="yes" <?php if ($campo['google'] == 'yes') {
                                                                     echo 'checked';
                                                                 } ?>> sim
             <br>
         </div>
         <div>
             <h3>feito software?</h3>
-            <input name="check[]" type="checkbox" value="yes" <?php if ($campo['rom'] != '') {
+            <input name="check[]" type="checkbox" value="yes" <?php if ($campo['rom'] == 'yes') {
                                                                 echo 'checked';
                                                             } ?>> sim
             <br>
         </div>
         <div>
             <h3>executado phone check?</h3>
-            <input name="check[]" type="checkbox" value="yes" <?php if ($campo['app'] != '') {
+            <input name="check[]" type="checkbox" value="yes" <?php if ($campo['app'] == 'yes') {
                                                                 echo 'checked';
                                                             } ?>> sim
             <br>
         </div>
         <div>
             <h3>feito teste de stress?</h3>
-            <input name="check[]" type="checkbox" value="yes" <?php if ($campo['stress'] != '') {
+            <input name="check[]" type="checkbox" value="yes" <?php if ($campo['stress'] == 'yes') {
                                                                     echo 'checked';
                                                                 } ?>> sim
             <br>
         </div>
         <div>
             <h3>feito teste com chip?</h3>
-            <input name="check[]" type="checkbox" value="yes" <?php if ($campo['chip'] != '') {
+            <input name="check[]" type="checkbox" value="yes" <?php if ($campo['chip'] == 'yes') {
                                                                 echo 'checked';
                                                             } ?>> sim
             <br>
@@ -58,15 +58,19 @@
 
 include ('../conexao.php');
 
-// Verifica se usuário escolheu alguma checkbox.
-if(isset($_POST["check"]))
+if(isset($_POST["carga"])){$carga = $_POST["carga"];}
 
-// Faz loop pelo array variavel
-foreach($_POST["check"] as $variavel)
+if(isset($_POST["save"])){
 
-echo $variavel;
+$qry = "UPDATE checklist_celular SET carga = '$carga' WHERE serie = '$serial'";
 
+$conexao->query($qry);
 
+if($qry){
+    header('location: consultar.php?busca='.$busca);
+}
+
+}
 
 
 ?>
