@@ -19,10 +19,13 @@
 
         if (isset($_GET['deletar'])) {
             $result = $_GET['deletar'];
+            $categoria = $row['categoria'];
 
-            $del = "DELETE FROM produtos WHERE serial = '$result'";
+            $query = "DELETE FROM produtos WHERE serial = '$result'; ";
+            $query .= "DELETE FROM checklist_notebook WHERE serie = '$result';";
+            $query .= "DELETE FROM checklist_celular WHERE serie = '$result';";
 
-            if (mysqli_query($conexao, $del)) {
+            if (mysqli_multi_query($conexao, $query)) {
                 header('location:consultar.php?deletado');
             } else {
                 header('location:consultar.php?ndeletado');
